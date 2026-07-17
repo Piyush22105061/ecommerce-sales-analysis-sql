@@ -93,3 +93,14 @@ LEFT JOIN ecom.customers c
 ON o.customer_id = c.customer_id
 WHERE c.customer_id IS NULL;
 
+-- Status Abnormality 
+SELECT status, COUNT(*) AS total_orders
+FROM ecom.orders
+GROUP BY status
+ORDER BY status;
+
+-- Gender Abnormality
+SELECT gender , count(*) gender_count
+FROM ecom.customers
+GROUP BY gender
+ORDER BY gender;
