@@ -82,7 +82,7 @@ FROM ecom.orders;
 SELECT sum(total) total_revenue
 from ecom.orders
 
--- Average Order Value
+-- Average revenue per customer 
 SELECT round(sum(total)/ COUNT (DISTINCT customer_id) ,2)   as avg_order_value
 from ecom.orders
 
